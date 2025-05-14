@@ -34,22 +34,29 @@ function App() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#23272f", padding: "32px", fontFamily: "Arial, sans-serif" }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundImage: "linear-gradient(135deg, #43cea2 0%, #185a9d 100%)",
+        padding: "32px",
+        fontFamily: "Arial, sans-serif"
+      }}
+    >
       <nav style={{ display: "flex", gap: "16px", marginBottom: "32px" }}>
         <button
-          style={{ background: "#d32f2f", color: "#fff", border: "none", padding: "12px 24px", borderRadius: "8px", cursor: "pointer" }}
+          style={{ background: "#fff", color: "#000", border: "none", padding: "12px 24px", borderRadius: "8px", cursor: "pointer", fontWeight: "bold" }}
           onClick={() => { setView("inicio"); setSearch(""); }}
         >
           Inicio
         </button>
         <button
-          style={{ background: "#d32f2f", color: "#fff", border: "none", padding: "12px 24px", borderRadius: "8px", cursor: "pointer" }}
+          style={{ background: "#fff", color: "#000", border: "none", padding: "12px 24px", borderRadius: "8px", cursor: "pointer", fontWeight: "bold" }}
           onClick={() => setView("buscar")}
         >
           Buscar
         </button>
         <button
-          style={{ background: "#d32f2f", color: "#fff", border: "none", padding: "12px 24px", borderRadius: "8px", cursor: "pointer" }}
+          style={{ background: "#fff", color: "#000", border: "none", padding: "12px 24px", borderRadius: "8px", cursor: "pointer", fontWeight: "bold" }}
           onClick={() => setView("nuevo")}
         >
           Nuevo Restaurante
@@ -95,7 +102,7 @@ function App() {
             maxWidth: "400px"
           }}
         >
-          <h2 style={{ color: "#d32f2f" }}>Agregar Restaurante</h2>
+          <h2 style={{ color: "#000" }}>Agregar Restaurante</h2>
           <div style={{ marginBottom: "16px" }}>
             <label>Nombre:</label>
             <input
@@ -142,21 +149,21 @@ function App() {
           </div>
           <button
             type="submit"
-            style={{ background: "#d32f2f", color: "#fff", border: "none", padding: "10px 20px", borderRadius: "6px", cursor: "pointer" }}
+            style={{ background: "#000", color: "#fff", border: "none", padding: "10px 20px", borderRadius: "6px", cursor: "pointer", fontWeight: "bold" }}
           >
             Guardar
           </button>
           <button
             type="button"
             onClick={() => setView("inicio")}
-            style={{ marginLeft: "10px", background: "#888", color: "#fff", border: "none", padding: "10px 20px", borderRadius: "6px", cursor: "pointer" }}
+            style={{ marginLeft: "10px", background: "#888", color: "#fff", border: "none", padding: "10px 20px", borderRadius: "6px", cursor: "pointer", fontWeight: "bold" }}
           >
             Cancelar
           </button>
         </form>
       )}
 
-      <h2 style={{ color: "#d32f2f", marginBottom: "24px", textAlign: "center" }}>Restaurantes la avenida</h2>
+      <h2 style={{ color: "#000", marginBottom: "24px", textAlign: "center" }}>Restaurantes la avenida</h2>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "24px", justifyContent: "center" }}>
         {(view === "buscar" ? filteredRestaurants : restaurants).map((r, idx) => (
           <div
@@ -183,7 +190,7 @@ function App() {
           </div>
         ))}
       </div>
-      <h2 style={{ color: "#d32f2f", marginTop: "32px", textAlign: "center" }}>Restaurantes </h2>
+      <h2 style={{ color: "#000", marginTop: "50px", textAlign: "center" }}>Restaurantes y sabor </h2>
     </div>
   );
 }
