@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
-// Si usas React Router, descomenta la siguiente línea:
-// import { Link } from 'react-router-dom';
+
 
 export default function NewRestaurant() {
   const [nombre, setNombre] = useState('');
@@ -18,14 +17,14 @@ export default function NewRestaurant() {
       imagen
     };
 
-    // Guardar en localStorage
+    
     const restaurantes = JSON.parse(localStorage.getItem('restaurantes')) || [];
     restaurantes.push(nuevoRestaurante);
     localStorage.setItem('restaurantes ', JSON.stringify(restaurantes ));
 
     Swal.fire("Restaurante creado correctamente", "", "success");
 
-    // Limpiar formulario
+    
     setNombre('');
     setDescripcion('');
     setDireccion('');
@@ -34,14 +33,9 @@ export default function NewRestaurant() {
 
   return (
     <div className="container mt-4">
-      {/* Botones de navegación */}
+      
       <div className="mb-3">
-        {/* Si usas React Router, usa <Link> en vez de <button> */}
-        {/* 
-        <Link to="/" className="btn btn-primary me-2">Inicio</Link>
-        <Link to="/buscar" className="btn btn-secondary me-2">Buscar</Link>
-        <Link to="/nuevo" className="btn btn-success">Nuevo Restaurante</Link>
-        */}
+       
         <button className="btn btn-primary me-2">Inicio</button>
         <button className="btn btn-secondary me-2">Buscar</button>
         <button className="btn btn-success">Nuevo Restaurante</button>

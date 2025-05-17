@@ -13,17 +13,17 @@ function App() {
   });
   const [successMessage, setSuccessMessage] = useState("");
 
-  // Filtrar restaurantes por búsqueda
+  
   const filteredRestaurants = restaurants.filter(r =>
     r.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  // Manejar cambios en el formulario de nuevo restaurante
+  
   const handleChange = e => {
     setNewRestaurant({ ...newRestaurant, [e.target.name]: e.target.value });
   };
 
-  // Guardar nuevo restaurante
+  
   const handleSubmit = e => {
     e.preventDefault();
     setRestaurants([...restaurants, newRestaurant]);
