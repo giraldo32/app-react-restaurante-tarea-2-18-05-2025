@@ -163,7 +163,7 @@ function App() {
         </form>
       )}
 
-      <h2 style={{ color: "#000", marginBottom: "24px", textAlign: "center" }}>Restaurantes la avenida</h2>
+      <h2 style={{ color: "#000", marginBottom: "24px", textAlign: "center" }}>RESTAURANTES LA AVENIDA</h2>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "24px", justifyContent: "center" }}>
         {(view === "buscar" ? filteredRestaurants : restaurants).map((r, idx) => (
           <div
@@ -190,7 +190,7 @@ function App() {
           </div>
         ))}
       </div>
-      <h2 style={{ color: "#000", marginTop: "50px", textAlign: "center" }}>Restaurantes y sabor </h2>
+      <h2 style={{ color: "#000", marginTop: "50px", textAlign: "center" }}>RESTAURANTES</h2>
     </div>
   );
 }
